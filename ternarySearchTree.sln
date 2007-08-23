@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ternarySearchTree", "ternarySearchTree.vcproj", "{E4640673-5435-44C6-B716-24DA1B7B5C05}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E4640673-5435-44C6-B716-24DA1B7B5C05}.Debug.ActiveCfg = Debug|Win32
+		{E4640673-5435-44C6-B716-24DA1B7B5C05}.Debug.Build.0 = Debug|Win32
+		{E4640673-5435-44C6-B716-24DA1B7B5C05}.Release.ActiveCfg = Release|Win32
+		{E4640673-5435-44C6-B716-24DA1B7B5C05}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
