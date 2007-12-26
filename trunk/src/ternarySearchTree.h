@@ -188,7 +188,7 @@ public:
 		return this->itemVector[ index ];
 	}
 
-	inline Vector< TstItem<Object> * > & getItems() const
+	inline Vector< TstItem<Object> * > & getItems()
 	{
 		return this->itemVector;
 	}
@@ -202,7 +202,8 @@ public:
 
 	inline const char * getKey( int index ) const
 	{
-		return index == -1 ? NULL : this->itemVector[ index ]->key.c_str();
+		D( assert( index >=0 && index < this->itemCount ); )
+		return this->itemVector[ index ]->key.c_str();
 	}
 
 	/**
@@ -227,7 +228,7 @@ public:
 
 	Object * getValue( int index ) const
 	{
-		D ( assert ( index >= 0 && index < (int)(this->itemVector->count()) ); )
+		D ( assert ( index >= 0 && index < (int)this->itemCount ); )
 		return &this->itemVector[ index ]->value;
 	}
 
