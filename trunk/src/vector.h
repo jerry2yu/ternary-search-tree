@@ -370,7 +370,7 @@ void Vector<Object>::insert( const Object &val, size_t pos )
 
 	if ( currentSize == maxSize ) 
 	{
-		maxSize = maxSize != 0 ? 2 * maxSize : 1;
+		maxSize = maxSize != 0 ? maxSize << 1 : 1;
 		/*if ( maxSize < GROW_THRESHOLD )
 			maxSize *= 2;
 		else
