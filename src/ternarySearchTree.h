@@ -248,7 +248,7 @@ public:
          {
             if (*key)
             {
-                  ++key;
+               ++key;
                tst = tst->mid;
             }
             else
@@ -485,13 +485,13 @@ TstNode * TernarySearchTree<Object>::add( const char* key, const Object & value 
 #ifdef TST_INFO_ENABLE
    this->strLenCount += sizeof( string(key)) + (int)strlen(key) + 1;
 #endif
-   TstNode * tstNode = add( key );
+   TstNode * tstNode = this->add( key );
    if ( tstNode )
    {
       if ( this->existingItemIndex == -1 )
-      {   // key not existed in tst tree
+      {   // key is not existed in tst tree
          this->itemVector.add( new TstItem<Object>( key, value ) );
-         tstNode->index = itemCount -1;
+         tstNode->index = this->itemCount -1;
       }
       else
       {
@@ -507,8 +507,8 @@ TstNode * TernarySearchTree<Object>::add( const char* key, const Object & value 
 template <class Object>
 TstNode* TernarySearchTree<Object>::add( const char* key )
 {
-   if( key == 0 || *key == 0)
-      return 0;
+   if( key == NULL || *key == 0)
+      return NULL;
 
    //cout<<"Inserting "<<key<<endl;
    TstTree tst = this->root, parent = 0;
