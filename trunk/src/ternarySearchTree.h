@@ -693,7 +693,7 @@ void TernarySearchTree<Object>::buildBalancedTree( Vector< TstItem<Object> > & n
       this->clear();
       // sort the items by keys, and binary insert, then we will get a balanced tree
       newItemVector.sort();
-      this->buildBalancedTreeRecursive( newItemVector, 0, newItemVector.count() - 1 );
+      this->buildBalancedTreeRecursive( newItemVector, 0, (int)newItemVector.count() - 1 );
    }
 }
 
