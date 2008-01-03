@@ -32,15 +32,15 @@ string::string( const char * cstring )
    assert ( cstring );
    if ( cstring )
    {
-   	  this->bufferLength = ( this->strLength = strlen( cstring ) ) + 1;
-   	  if ( ( this->buffer = ( char * ) malloc( this->bufferLength ) ) )
-   	  {
+      this->bufferLength = ( this->strLength = strlen( cstring ) ) + 1;
+      if ( ( this->buffer = ( char * ) malloc( this->bufferLength ) ) )
+      {
          memcpy ( this->buffer, cstring, this->bufferLength );
-   	  }
-   	  else
-   	  {
-   	     this->init();
-   	  }
+      }
+      else
+      {
+         this->init();
+      }
    }
    else
    {
@@ -159,7 +159,6 @@ const string & string::operator=( const string & copy )
    return *this;
 }
 
-
 const string & string::operator=( const char ch )
 {
    this->emptyIt();
@@ -197,7 +196,6 @@ string operator + ( const string &s1, const char c2 )
 
 inline string operator + ( const char c1, const string &s2)
 {
-
    return string ( c1 ) += s2;
 }
 
@@ -215,6 +213,7 @@ string & string::append( const char* str, size_t len )
       ++p;
       ++size_suffix;
    }
+ 
    if ( !size_suffix)
       return *this;
 
@@ -249,8 +248,10 @@ string & string::append( const char* str, size_t len )
       // we know we can safely append the new string
       memcpy ( this->buffer + this->length (), str, size_suffix );
    }
+   
    this->strLength = new_size - 1;
    this->buffer [ strLength ] = 0;
+   
    return *this;
 
 }
@@ -524,6 +525,7 @@ int string::BoyerMooreSearch( const char * str, const char* pattern, size_t len 
    for( int i=0; i<(int)len; ++i ) skip[ (unsigned char)pattern[i] ] = (int)len - i - 1;
 
    int textIndex, patternIndex, intLen = (int)strlen( str );
+   
    for( textIndex = patternIndex = (int)len-1; patternIndex >= 0; --textIndex, --patternIndex )
    {
       while( str[textIndex] != pattern[patternIndex] ) 
