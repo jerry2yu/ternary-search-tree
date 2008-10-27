@@ -36,8 +36,7 @@ WebSite: http://www.cs.dal.ca/~zyu
 #include <time.h>
 
 #define MAX_LINE_LEN			1024
-#define DIC_FILE_NAME			"C:\\temp\\test.txt"
-//#define DIC_FILE_NAME			"C:\\WORKSPACES\\Project\\Others\\ternarySearchTree\\data\\dic.txt"
+#define DIC_FILE_NAME			"C:\\WORKSPACES\\Project\\Others\\ternarySearchTree\\data\\dic.txt"
 
 void ternarySearchTreeUnitTest()
 {
