@@ -1,0 +1,1 @@
+A C++ package that implements ternary search tree, which combines the time efficiency of digital tries with the space efficiency of binary search trees. It it is reported comparable with hashing table in most cases, and substantially faster than hashing for unsuccessful searches.
